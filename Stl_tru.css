@@ -1,0 +1,232 @@
+body
+{
+    margin: 0;
+}
+@media all and (min-width: 1096px)
+{
+    .swpl
+    {
+        display: none;
+    }
+    #swipe
+    {
+        display: none;
+    }
+    #menu li
+    {
+        display: inline-block;
+        position: relative;
+    }
+
+    .lst
+    {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    #mmm
+    {
+        position: sticky;
+        top: 0;
+    }
+
+    #menu
+    {
+        position: relative;
+        background-color: deepskyblue;
+        margin: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #menu a
+    {
+        text-decoration: none;
+        color: black;
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menu ul
+    {
+        position: absolute;
+        top: 56px;
+        padding: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    #menu li:hover > ul {
+        display: inherit;
+    }
+
+    #menu li:hover {
+        background-color: gray;
+    }
+
+    #menu ul li {
+        display: block;
+        position: relative;
+        background-color: deepskyblue;
+        width: 1fr;
+        padding: 10px 20px;
+    }
+
+    #menu ul ul {
+        top: 0;
+        left: 100%;
+    }
+
+    li {
+        list-style-type: none;
+        padding: 10px 20px;
+    }
+
+    ul {
+        display: block;
+        list-style-type: none;
+    }
+
+    li > a:after {
+        content: ' >';
+    }
+
+    li > a:only-child:after {
+        content: '';
+    }
+
+    p {
+        word-break: break-word;
+        padding: 15px;
+        font-size: 30px;
+        font-family: "Open Sans", sans-serif;
+    }
+}
+@media all and (max-width: 1095px)
+{
+    #menu ul
+    {
+        position: absolute;
+        top: 56px;
+        padding: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+    ul
+    {
+        padding: 0;
+        margin: 0;
+    }
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font: 12px 'Open Sans', sans-serif;
+        color: #212121;
+        background: #eeeeee;
+        overflow-x: hidden;
+    }
+    #mmm {
+        display: flex;
+        min-height: 100%;
+        position: relative;
+    }
+    #swipe {
+        position: absolute;
+        opacity: 0;
+        float: left;
+    }
+    .swpl {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        display: block;
+        width: 42px;
+        height: 42px;
+        font: 42px fontawesome;
+        text-align: center;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .swpl:hover {
+        color: darkgray;
+    }
+    .swpl:checked {
+        display: block;
+    }
+    .swpl
+    {
+        transition: .3s;
+    }
+    #swipe1{
+        display: block;
+        transform: translate(0);
+        transition: .3s;
+    }
+    #swipe1:before
+    {
+        content: '\f0c9';
+    }
+    #swipe:checked ~ #swipe1{
+        transform: translate(280px);
+    }
+    #swipe:checked ~ #swipe1:before
+    {
+        content: "\f057";
+    }
+    #tx {
+        float: right;
+        margin: 80px 30px 0 30px;
+        background: #eee;
+        transform: translate(0);
+        transition: padding .23s, transform .3s;
+        word-break: break-word;
+    }
+    #swipe:checked ~ #tx {
+        transform: translate(280px);
+        padding-right:280px;
+    }
+    #swipe:checked ~ #menu {
+        transform: translate(0);
+    }
+    #menu {
+        transform: translate(-280px);
+        position: absolute;
+        width: 280px;
+        background: #263249;
+        color: #eee;
+        left: 0;
+        height: 100%;
+        transition: all .3s;
+        padding: 0;
+    }
+    #menu li {
+        padding: 10px;
+        list-style: none;
+        width: 80%;
+    }
+    #menu li a {
+        color: #fff;
+        border: 3px solid #fff;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 900;
+        display: block;
+        text-decoration: none;
+        padding: 5px 0 5px 0;
+        margin: 0 20px;
+    }
+    h1, p {
+        margin: 30px 0;
+        font-size: 45px;
+        font-weight: 500;
+    }
+    p {
+        font-size: 30px;
+    }
+}
